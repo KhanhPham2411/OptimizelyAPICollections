@@ -17,7 +17,7 @@
           "key": "test2",
           "disabled": false,
           "type": "file",
-          "src": "ServiceAPI/ImportFiles/MediaImportSample_create/MediaImportSample_create.zip"
+          "src": "e:/Personal/Projects/20240708_ThorAPI/thorclient-solution/references/OptimizelyAPICollections/ServiceAPI/ImportFiles/MediaImportSample_create/MediaImportSample_create.zip"
         }
       ]
     },
@@ -33,6 +33,15 @@
         "disabled": false,
         "type": "text",
         "operator": "=="
+      }
+    ],
+    "setvars": [
+      {
+        "id": "8322e8b0-2a42-4780-b7dd-cf7494e88eec",
+        "key": "TaskId",
+        "value": "response.data",
+        "disabled": false,
+        "type": "text"
       }
     ]
   },
