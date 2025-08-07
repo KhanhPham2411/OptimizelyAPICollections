@@ -39,6 +39,14 @@
       "type": "text",
       "privacy": "PRIVATE",
       "value": ""
+    },
+    {
+      "id": "85161b6f-ebfc-403e-9fc9-c6dde1d5c8de",
+      "key": "OPTIMIZELY_GRAPH_URL",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
     }
   ]
 }

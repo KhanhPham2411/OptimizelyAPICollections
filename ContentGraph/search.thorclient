@@ -1,0 +1,90 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "https://dev.cg.optimizely.com/graphql",
+    "url": {
+      "raw": "{{GatewayAddress}}/content/v2?stored=false&cache=true&omit_empty=false&authMode=epi-single&unique=false&auth={{OPTIMIZELY_GRAPH_SINGLE_KEY}}",
+      "query": [
+        {
+          "id": "7a09cc4b-551b-4ca2-9a2a-5de656ee0885",
+          "key": "unique",
+          "value": "false",
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "6dba308c-0285-4799-a698-bfe71cf4f7f3",
+          "key": "cache",
+          "value": "true",
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "ab0ae08a-f6e2-473e-82fc-43f1fbc86532",
+          "key": "authMode",
+          "value": "epi-single",
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "2dd41ea6-13bf-4036-99a8-3a0949727ece",
+          "key": "auth",
+          "value": "{{OPTIMIZELY_GRAPH_SINGLE_KEY}}",
+          "type": "string",
+          "isFound": true
+        }
+      ]
+    },
+    "header": [
+      {
+        "id": "23660d00-c00e-4a99-b2ff-eae64e8c47ec",
+        "key": "Content-Type",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "graphql",
+      "raw": "{\n    \"query\": \"query searchAllPages($searchTerm: String, $locale: String!, $siteId: String, $skip: Int!, $take: Int!) { filteredPages: SitePage(orderBy: { _ranking: SEMANTIC }, where: { Language: { Name: { eq: $locale } }, Status: { eq: \\\"Published\\\" }, SiteId: { eq: $siteId }, _fulltext: { contains: $searchTerm, fuzzy: true } }, skip: $skip, limit: $take) { total items { Name ContentLink { GuidValue } } } }\",\n    \"variables\": {\n      \"searchTerm\": \"product\",\n      \"locale\": \"en-US\",\n      \"siteId\": \"my-site\",\n      \"skip\": 0,\n      \"take\": 20\n    }\n  }",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      },
+      "graphql": {
+        "query": "query searchAllPages($searchTerm: String, $locale: String!, $siteId: String, $skip: Int!, $take: Int!) { filteredPages: StandardPage(orderBy: { _ranking: SEMANTIC }, where: { Language: { Name: { eq: $locale } }, Status: { eq: \"Published\" }, SiteId: { eq: $siteId }, _fulltext: { contains: $searchTerm, fuzzy: true } }, skip: $skip, limit: $take) { total items { Name ContentLink { GuidValue } } } }",
+        "variables": {
+          "searchTerm": "Blomsterhemmet",
+          "locale": "fi",
+          "siteId": "D3C941A2-D2E1-4813-9D03-7A76D84639B1",
+          "skip": 0,
+          "take": 20
+        }
+      }
+    }
+  },
+  "backup": {
+    "bodyType": "graphql",
+    "graphqlQuery": "query searchAllPages($searchTerm: String, $locale: String!, $siteId: String, $skip: Int!, $take: Int!) { filteredPages: StandardPage(orderBy: { _ranking: SEMANTIC }, where: { Language: { Name: { eq: $locale } }, Status: { eq: \"Published\" }, SiteId: { eq: $siteId }, _fulltext: { contains: $searchTerm, fuzzy: true } }, skip: $skip, limit: $take) { total items { Name ContentLink { GuidValue } } } }",
+    "graphqlVariables": "{\n  \"searchTerm\": \"Blomsterhemmet\",\n  \"locale\": \"fi\",\n  \"siteId\": \"D3C941A2-D2E1-4813-9D03-7A76D84639B1\",\n  \"skip\": 0,\n  \"take\": 20\n}"
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "data",
+      "extensions"
+    ]
+  }
+}
