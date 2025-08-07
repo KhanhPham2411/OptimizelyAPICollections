@@ -52,21 +52,15 @@
         }
       },
       "graphql": {
-        "query": "query searchAllPages($searchTerm: String, $locale: String!, $siteId: String, $skip: Int!, $take: Int!) { filteredPages: StandardPage(orderBy: { _ranking: SEMANTIC }, where: { Language: { Name: { eq: $locale } }, Status: { eq: \"Published\" }, SiteId: { eq: $siteId }, _fulltext: { contains: $searchTerm, fuzzy: true } }, skip: $skip, limit: $take) { total items { Name ContentLink { GuidValue } } } }",
-        "variables": {
-          "searchTerm": "hem",
-          "locale": "fi",
-          "siteId": "D3C941A2-D2E1-4813-9D03-7A76D84639B1",
-          "skip": 0,
-          "take": 20
-        }
+        "query": "query MyQuery {\r\n  SitePage {\r\n    cursor\r\n    total\r\n    items {\r\n      _deleted\r\n      _modified\r\n      _score\r\n      _id\r\n      Name\r\n      RouteSegment\r\n      Url\r\n      Changed\r\n      Created\r\n      StartPublish\r\n      StopPublish\r\n      Saved\r\n      Status\r\n      IsCommonDraft\r\n      RelativePath\r\n      Shortcut\r\n      SimpleAddress\r\n      _concreteType\r\n      SiteId\r\n      _sortOrder\r\n      MetaTitle\r\n      MetaDescription\r\n    }\r\n  }\r\n}",
+        "variables": {}
       }
     }
   },
   "backup": {
     "bodyType": "graphql",
-    "graphqlQuery": "query searchAllPages($searchTerm: String, $locale: String!, $siteId: String, $skip: Int!, $take: Int!) { filteredPages: StandardPage(orderBy: { _ranking: SEMANTIC }, where: { Language: { Name: { eq: $locale } }, Status: { eq: \"Published\" }, SiteId: { eq: $siteId }, _fulltext: { contains: $searchTerm, fuzzy: true } }, skip: $skip, limit: $take) { total items { Name ContentLink { GuidValue } } } }",
-    "graphqlVariables": "{\n  \"searchTerm\": \"hem\",\n  \"locale\": \"fi\",\n  \"siteId\": \"D3C941A2-D2E1-4813-9D03-7A76D84639B1\",\n  \"skip\": 0,\n  \"take\": 20\n}"
+    "graphqlQuery": "query MyQuery {\r\n  SitePage {\r\n    cursor\r\n    total\r\n    items {\r\n      _deleted\r\n      _modified\r\n      _score\r\n      _id\r\n      Name\r\n      RouteSegment\r\n      Url\r\n      Changed\r\n      Created\r\n      StartPublish\r\n      StopPublish\r\n      Saved\r\n      Status\r\n      IsCommonDraft\r\n      RelativePath\r\n      Shortcut\r\n      SimpleAddress\r\n      _concreteType\r\n      SiteId\r\n      _sortOrder\r\n      MetaTitle\r\n      MetaDescription\r\n    }\r\n  }\r\n}",
+    "graphqlVariables": ""
   },
   "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
   "event": {
