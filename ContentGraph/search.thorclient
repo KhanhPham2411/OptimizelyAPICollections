@@ -1,7 +1,6 @@
 {
   "request": {
     "method": "POST",
-    "name": "https://dev.cg.optimizely.com/graphql",
     "url": {
       "raw": "{{GatewayAddress}}/content/v2?stored=false&cache=true&omit_empty=false&authMode=epi-single&unique=false&auth={{OPTIMIZELY_GRAPH_SINGLE_KEY}}",
       "query": [
