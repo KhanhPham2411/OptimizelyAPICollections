@@ -1,0 +1,36 @@
+{
+  "variables": [
+    {
+      "id": "imported_9",
+      "key": "Optimizely__ContentGraph__GatewayAddress",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false
+    },
+    {
+      "id": "imported_10",
+      "key": "Optimizely__ContentGraph__AppKey",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false
+    },
+    {
+      "id": "imported_11",
+      "key": "Optimizely__ContentGraph__Secret",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false
+    },
+    {
+      "id": "imported_12",
+      "key": "Optimizely__ContentGraph__SingleKey",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false
+    }
+  ]
+}
