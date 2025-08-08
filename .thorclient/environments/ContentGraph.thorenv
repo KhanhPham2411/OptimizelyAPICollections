@@ -5,8 +5,10 @@
       "key": "GatewayAddress",
       "disabled": false,
       "type": "text",
-      "privacy": "PRIVATE",
-      "value": ""
+      "privacy": "PUBLIC",
+      "value": "https://cg.optimizely.com",
+      "updated": 1754634424353,
+      "updateSource": "ENVIRONMENT"
     },
     {
       "id": "36b07eb8-2e76-437b-8225-bb2de2f097d6",
