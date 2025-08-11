@@ -1,20 +1,36 @@
 {
   "variables": [
     {
-      "id": "6298cd4b-8239-458a-a8af-05c70712e01f",
-      "key": "GatewayAddress",
-      "disabled": false,
+      "id": "imported_9",
+      "key": "Optimizely__ContentGraph__GatewayAddress",
+      "value": "",
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "disabled": false
     },
     {
-      "id": "b43573a2-40e9-4821-8deb-60296c34497c",
-      "key": "OPTIMIZELY_GRAPH_SINGLE_KEY",
-      "disabled": false,
+      "id": "imported_10",
+      "key": "Optimizely__ContentGraph__AppKey",
+      "value": "",
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "disabled": false
+    },
+    {
+      "id": "imported_11",
+      "key": "Optimizely__ContentGraph__Secret",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false
+    },
+    {
+      "id": "imported_12",
+      "key": "Optimizely__ContentGraph__SingleKey",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false
     }
   ]
 }
