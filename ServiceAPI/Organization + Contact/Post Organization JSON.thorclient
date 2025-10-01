@@ -18,7 +18,7 @@
     ],
     "body": {
       "mode": "raw",
-      "raw": "{\r\n        \"PrimaryKeyId\": \"1118eb2d-8839-432d-a6f7-32cf30e5fabc\",\r\n        \"Addresses\": [],\r\n        \"ChildOrganizations\": [\r\n            {\r\n                \"PrimaryKeyId\": \"1118eb2d-8839-432d-a6f7-32cf30e5fabc\",\r\n                \"Addresses\": [],\r\n                \"ChildOrganizations\": [],\r\n                \"Contacts\": [],\r\n                \"OrganizationType\": \"Organization Unit\",\r\n                \"OrgCustomerGroup\": \"Customer\"\r\n            }\r\n        ],\r\n        \"Contacts\": [],\r\n        \"OrganizationType\": \"Organization\",\r\n        \"OrgCustomerGroup\": \"Partner\"\r\n}"
+      "raw": "{\r\n  \"PrimaryKeyId\": \"1118eb2d-8839-432d-a6f7-32cf30e5fab3\",\r\n  \"Addresses\": [],\r\n  \"ChildOrganizations\": [],\r\n  \"Contacts\": [],\r\n  \"OrganizationType\": \"Organization\",\r\n  \"OrgCustomerGroup\": \"Partner\",\r\n  \"Name\": \"Test3\",\r\n  \"properties\": [\r\n    {\r\n      \"key\": \"Test\",\r\n      \"value\": \"333\"\r\n    }\r\n  ]\r\n}"
     },
     "url": {
       "raw": "{{SiteUrl}}/episerverapi/commerce/customers/organization"
@@ -33,6 +33,20 @@
         "type": "text",
         "operator": "=="
       }
+    ]
+  },
+  "response": {
+    "keys": [
+      "PrimaryKeyId",
+      "Addresses",
+      "ChildOrganizations",
+      "Contacts",
+      "OrganizationType",
+      "OrgCustomerGroup",
+      "BusinessCategory",
+      "Name",
+      "Description",
+      "Properties"
     ]
   }
 }
