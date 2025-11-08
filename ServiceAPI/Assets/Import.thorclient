@@ -1,0 +1,53 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}",
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "formdata",
+      "formdata": [
+        {
+          "id": "421c2c34-db70-4f0f-aa41-79e580e316e7",
+          "key": "test2",
+          "disabled": false,
+          "type": "file",
+          "src": "e:/Personal/Projects/20240708_ThorAPI/thorclient-solution/references/OptimizelyAPICollections/ServiceAPI/ImportFiles/MediaImportSample_create/MediaImportSample_create.zip"
+        }
+      ]
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/import/assets"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ],
+    "setvars": [
+      {
+        "id": "8322e8b0-2a42-4780-b7dd-cf7494e88eec",
+        "key": "TaskId",
+        "value": "response.data",
+        "disabled": false,
+        "type": "text"
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "message"
+    ]
+  }
+}

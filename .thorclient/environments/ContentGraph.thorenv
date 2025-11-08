@@ -1,0 +1,20 @@
+{
+  "variables": [
+    {
+      "id": "274e55e6-c021-4bcf-921c-e8a0d88efe96",
+      "key": "Optimizely__ContentGraph__GatewayAddress",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    },
+    {
+      "id": "36b07eb8-2e76-437b-8225-bb2de2f097d6",
+      "key": "Optimizely__ContentGraph__SingleKey",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    }
+  ]
+}

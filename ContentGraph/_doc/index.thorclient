@@ -1,0 +1,72 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "https://dev.cg.optimizely.com/_doc/1e6d69b1-d0bb-456a-bdb7-3b9ce5c680d3_133_en_CheckedOut?language_routing=en&hashVersion=iEbX4A%3D%3D",
+    "url": {
+      "raw": "https://dev.cg.optimizely.com/_doc/1e6d69b1-d0bb-456a-bdb7-3b9ce5c680d3_133_en_CheckedOut?language_routing=en&hashVersion=iEbX4A%3D%3D"
+    },
+    "header": [
+      {
+        "id": "d4bde04e-87ad-4c3d-9561-3350f299e98f",
+        "key": "Content-Type",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "ea75eddf-67fa-4293-97c8-b749772a9475",
+        "key": "User-Agent",
+        "value": "EPiServer-Find-NET-API/4.1.0.0",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\"ContentLink\":{\"Id\":118,\"WorkId\":133,\"GuidValue\":\"1e6d69b1-d0bb-456a-bdb7-3b9ce5c680d3\",\"ProviderName\":null,\"Url\":\"http://localhost:8081/en/test-draft/\",\"Language\":null,\"Expanded\":null},\"Name___searchable\":\"Test Draft\",\"Language\":{\"Link\":\"http://localhost:8081/en/test-draft/\",\"DisplayName\":\"English\",\"Name\":\"en\"},\"ExistingLanguages\":[{\"Link\":\"http://localhost:8081/en/test-draft/\",\"DisplayName\":\"English\",\"Name\":\"en\"}],\"MasterLanguage\":{\"Link\":\"http://localhost:8081/en/test-draft/\",\"DisplayName\":\"English\",\"Name\":\"en\"},\"ContentType\":[\"Page\",\"StandardPage\",\"Content\"],\"ParentLink\":{\"Id\":5,\"WorkId\":0,\"GuidValue\":\"7b08c7d5-7585-47e5-add7-5822da68c3ce\",\"ProviderName\":null,\"Url\":\"http://localhost:8081/en/\",\"Language\":null,\"Expanded\":null},\"RouteSegment\":\"test-draft\",\"Url\":\"http://localhost:8081/en/test-draft/\",\"Changed\":\"2025-10-28T10:07:56Z\",\"Created\":\"2025-10-28T09:58:17Z\",\"StartPublish\":\"2025-10-28T10:07:56Z\",\"StopPublish\":null,\"Saved\":\"2025-10-29T03:42:50Z\",\"Status\":\"CheckedOut\",\"Category\":[],\"ContentAreaItem1\":null,\"MetaTitle___searchable\":\"test22\",\"PageImage\":null,\"MetaKeywords\":null,\"TeaserText___searchable\":\"\",\"HideSiteHeader\":null,\"MetaDescription___searchable\":\"\",\"HideSiteFooter\":null,\"MainBody___searchable\":null,\"MainContentArea___searchable\":null,\"ContentRef\":null,\"DisableIndexing\":null,\"Ancestors\":[\"7b08c7d5-7585-47e5-add7-5822da68c3ce\",\"43f936c9-9b23-4ea3-97b2-61c538ad07c9\"],\"IsCommonDraft\":true,\"_rbac\":[\"r:Administrators:FullAccess\",\"r:Everyone:Read\",\"r:WebAdmins:Read\"],\"RelativePath\":\"/en/test-draft\",\"RolesWithReadAccess\":[\"Administrators\",\"Everyone\",\"WebAdmins\"],\"Shortcut\":\"Normal\",\"SimpleAddress\":\"\",\"__typename\":\"StandardPage\",\"UsersWithReadAccess\":[],\"_concreteType\":\"StandardPage\",\"SiteId\":\"d3c941a2-d2e1-4813-9d03-7a76d84639b1\",\"_sortOrder\":309}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    },
+    "auth": {
+      "type": "basic",
+      "basic": [
+        {
+          "key": "username",
+          "value": "",
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "backup": {
+    "bodyType": "raw",
+    "bodySubType": "json",
+    "rawData": "{\n  \"ContentLink\": {\n    \"Id\": 118,\n    \"WorkId\": 133,\n    \"GuidValue\": \"1e6d69b1-d0bb-456a-bdb7-3b9ce5c680d3\",\n    \"ProviderName\": null,\n    \"Url\": \"http://localhost:8081/en/test-draft/\",\n    \"Language\": null,\n    \"Expanded\": null\n  },\n  \"Name___searchable\": \"Test Draft\",\n  \"Language\": {\n    \"Link\": \"http://localhost:8081/en/test-draft/\",\n    \"DisplayName\": \"English\",\n    \"Name\": \"en\"\n  },\n  \"ExistingLanguages\": [\n    {\n      \"Link\": \"http://localhost:8081/en/test-draft/\",\n      \"DisplayName\": \"English\",\n      \"Name\": \"en\"\n    }\n  ],\n  \"MasterLanguage\": {\n    \"Link\": \"http://localhost:8081/en/test-draft/\",\n    \"DisplayName\": \"English\",\n    \"Name\": \"en\"\n  },\n  \"ContentType\": [\n    \"Page\",\n    \"StandardPage\",\n    \"Content\"\n  ],\n  \"ParentLink\": {\n    \"Id\": 5,\n    \"WorkId\": 0,\n    \"GuidValue\": \"7b08c7d5-7585-47e5-add7-5822da68c3ce\",\n    \"ProviderName\": null,\n    \"Url\": \"http://localhost:8081/en/\",\n    \"Language\": null,\n    \"Expanded\": null\n  },\n  \"RouteSegment\": \"test-draft\",\n  \"Url\": \"http://localhost:8081/en/test-draft/\",\n  \"Changed\": \"2025-10-28T10:07:56Z\",\n  \"Created\": \"2025-10-28T09:58:17Z\",\n  \"StartPublish\": \"2025-10-28T10:07:56Z\",\n  \"StopPublish\": null,\n  \"Saved\": \"2025-10-29T03:42:50Z\",\n  \"Status\": \"CheckedOut\",\n  \"Category\": [],\n  \"ContentAreaItem1\": null,\n  \"MetaTitle___searchable\": \"test22\",\n  \"PageImage\": null,\n  \"MetaKeywords\": null,\n  \"TeaserText___searchable\": \"\",\n  \"HideSiteHeader\": null,\n  \"MetaDescription___searchable\": \"\",\n  \"HideSiteFooter\": null,\n  \"MainBody___searchable\": null,\n  \"MainContentArea___searchable\": null,\n  \"ContentRef\": null,\n  \"DisableIndexing\": null,\n  \"Ancestors\": [\n    \"7b08c7d5-7585-47e5-add7-5822da68c3ce\",\n    \"43f936c9-9b23-4ea3-97b2-61c538ad07c9\"\n  ],\n  \"IsCommonDraft\": true,\n  \"_rbac\": [\n    \"r:Administrators:FullAccess\",\n    \"r:Everyone:Read\",\n    \"r:WebAdmins:Read\"\n  ],\n  \"RelativePath\": \"/en/test-draft\",\n  \"RolesWithReadAccess\": [\n    \"Administrators\",\n    \"Everyone\",\n    \"WebAdmins\"\n  ],\n  \"Shortcut\": \"Normal\",\n  \"SimpleAddress\": \"\",\n  \"__typename\": \"StandardPage\",\n  \"UsersWithReadAccess\": [],\n  \"_concreteType\": \"StandardPage\",\n  \"SiteId\": \"d3c941a2-d2e1-4813-9d03-7a76d84639b1\",\n  \"_sortOrder\": 309\n}"
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "_index",
+      "_id",
+      "_version",
+      "result",
+      "_shards",
+      "_seq_no",
+      "_primary_term"
+    ]
+  }
+}

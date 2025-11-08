@@ -1,0 +1,52 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\r\n  \"PrimaryKeyId\": \"1118eb2d-8839-432d-a6f7-32cf30e5fab3\",\r\n  \"Addresses\": [],\r\n  \"ChildOrganizations\": [],\r\n  \"Contacts\": [],\r\n  \"OrganizationType\": \"Organization\",\r\n  \"OrgCustomerGroup\": \"Partner\",\r\n  \"Name\": \"Test3\",\r\n  \"properties\": [\r\n    {\r\n      \"key\": \"Test\",\r\n      \"value\": \"333\"\r\n    }\r\n  ]\r\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/customers/organization"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "PrimaryKeyId",
+      "Addresses",
+      "ChildOrganizations",
+      "Contacts",
+      "OrganizationType",
+      "OrgCustomerGroup",
+      "BusinessCategory",
+      "Name",
+      "Description",
+      "Properties"
+    ]
+  }
+}

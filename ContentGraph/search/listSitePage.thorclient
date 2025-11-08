@@ -1,0 +1,83 @@
+{
+  "request": {
+    "method": "POST",
+    "url": {
+      "raw": "{{Optimizely__ContentGraph__GatewayAddress}}/content/v2?stored=false&cache=true&omit_empty=false&authMode=epi-single&unique=false&auth={{Optimizely__ContentGraph__SingleKey}}",
+      "query": [
+        {
+          "id": "345a96a4-db32-414e-915c-47367397c43f",
+          "key": "unique",
+          "value": "false",
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "9e6d71bb-d5ac-4401-bf6f-3ae20e109642",
+          "key": "cache",
+          "value": "true",
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "cfb70e1e-a0d2-48a3-9c1f-f2e4cc461fd4",
+          "key": "authMode",
+          "value": "epi-single",
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "aa0c3045-1824-44d6-afca-157d4f2ce4ed",
+          "key": "auth",
+          "value": "{{Optimizely__ContentGraph__SingleKey}}",
+          "type": "string",
+          "isFound": true
+        }
+      ]
+    },
+    "header": [
+      {
+        "id": "23660d00-c00e-4a99-b2ff-eae64e8c47ec",
+        "key": "Content-Type",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "graphql",
+      "raw": "{\n    \"query\": \"query searchAllPages($searchTerm: String, $locale: String!, $siteId: String, $skip: Int!, $take: Int!) { filteredPages: SitePage(orderBy: { _ranking: SEMANTIC }, where: { Language: { Name: { eq: $locale } }, Status: { eq: \\\"Published\\\" }, SiteId: { eq: $siteId }, _fulltext: { contains: $searchTerm, fuzzy: true } }, skip: $skip, limit: $take) { total items { Name ContentLink { GuidValue } } } }\",\n    \"variables\": {\n      \"searchTerm\": \"product\",\n      \"locale\": \"en-US\",\n      \"siteId\": \"my-site\",\n      \"skip\": 0,\n      \"take\": 20\n    }\n  }",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      },
+      "graphql": {
+        "query": "query MyQuery {\r\n  ProductPage {\r\n    cursor\r\n    total\r\n    items {\r\n      _deleted\r\n      _modified\r\n      _score\r\n      _id\r\n      Name\r\n      RouteSegment\r\n      Url\r\n      Changed\r\n      Created\r\n      StartPublish\r\n      StopPublish\r\n      Saved\r\n      Status\r\n      IsCommonDraft\r\n      RelativePath\r\n      Shortcut\r\n      SimpleAddress\r\n      _concreteType\r\n      SiteId\r\n      _sortOrder\r\n      MetaTitle\r\n      MetaDescription\r\n    }\r\n  }\r\n}",
+        "variables": {}
+      }
+    }
+  },
+  "backup": {
+    "bodyType": "graphql",
+    "graphqlQuery": "query MyQuery {\r\n  ProductPage {\r\n    cursor\r\n    total\r\n    items {\r\n      _deleted\r\n      _modified\r\n      _score\r\n      _id\r\n      Name\r\n      RouteSegment\r\n      Url\r\n      Changed\r\n      Created\r\n      StartPublish\r\n      StopPublish\r\n      Saved\r\n      Status\r\n      IsCommonDraft\r\n      RelativePath\r\n      Shortcut\r\n      SimpleAddress\r\n      _concreteType\r\n      SiteId\r\n      _sortOrder\r\n      MetaTitle\r\n      MetaDescription\r\n    }\r\n  }\r\n}",
+    "graphqlVariables": ""
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "errors",
+      "extensions"
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "request": {
+    "method": "POST",
+    "url": {
+      "raw": "{{Optimizely__ContentGraph__GatewayAddress}}/content/v2?unique=false&cache=false",
+      "query": [
+        {
+          "id": "e0971b98-667e-4978-acee-2d75b258eaeb",
+          "key": "unique",
+          "value": "false",
+          "disabled": false,
+          "type": "string"
+        },
+        {
+          "id": "fd757790-2a3e-4249-8284-859f3ca76a29",
+          "key": "cache",
+          "value": "false",
+          "disabled": false,
+          "type": "string"
+        }
+      ]
+    },
+    "header": [
+      {
+        "id": "23660d00-c00e-4a99-b2ff-eae64e8c47ec",
+        "key": "Content-Type",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "graphql",
+      "raw": "{\n    \"query\": \"query searchAllPages($searchTerm: String, $locale: String!, $siteId: String, $skip: Int!, $take: Int!) { filteredPages: SitePage(orderBy: { _ranking: SEMANTIC }, where: { Language: { Name: { eq: $locale } }, Status: { eq: \\\"Published\\\" }, SiteId: { eq: $siteId }, _fulltext: { contains: $searchTerm, fuzzy: true } }, skip: $skip, limit: $take) { total items { Name ContentLink { GuidValue } } } }\",\n    \"variables\": {\n      \"searchTerm\": \"product\",\n      \"locale\": \"en-US\",\n      \"siteId\": \"my-site\",\n      \"skip\": 0,\n      \"take\": 20\n    }\n  }",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      },
+      "graphql": {
+        "query": "query GetContentByLink($status: String!) {\r\n  Content(\r\n    limit: 1\r\n    where: {\r\n      Status: { eq: $status }\r\n    }\r\n    orderBy: { Saved: DESC }\r\n  ) {\r\n    items {\r\n      ContentLink { Id WorkId }\r\n      Name\r\n      Language { Name }\r\n      Status\r\n      Url\r\n      Saved\r\n      __typename\r\n    }\r\n  }\r\n}",
+        "variables": {
+          "status": "CheckedOut"
+        }
+      }
+    },
+    "auth": {
+      "type": "basic",
+      "basic": [
+        {
+          "key": "username",
+          "value": "{{Optimizely__ContentGraph__AppKey}}",
+          "type": "string"
+        },
+        {
+          "key": "password",
+          "value": "{{Optimizely__ContentGraph__Secret}}",
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "backup": {
+    "bodyType": "graphql",
+    "graphqlQuery": "query GetContentByLink($status: String!) {\r\n  Content(\r\n    limit: 1\r\n    where: {\r\n      Status: { eq: $status }\r\n    }\r\n    orderBy: { Saved: DESC }\r\n  ) {\r\n    items {\r\n      ContentLink { Id WorkId }\r\n      Name\r\n      Language { Name }\r\n      Status\r\n      Url\r\n      Saved\r\n      __typename\r\n    }\r\n  }\r\n}",
+    "graphqlVariables": "{\r\n  \"status\": \"CheckedOut\"\r\n}"
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "code",
+      "status",
+      "details",
+      "system"
+    ]
+  }
+}
