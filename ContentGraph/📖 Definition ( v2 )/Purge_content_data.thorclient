@@ -1,0 +1,78 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Purge content data",
+    "description": {
+      "content": "Purge data for given source",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/content/v2/data?id=%3Cstring%3E&languages=%3Cstring%3E&languages=%3Cstring%3E",
+      "path": [
+        "api",
+        "content",
+        "v2",
+        "data"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "8837d358-af41-4edc-adb5-25f70f2b6ad7",
+          "key": "id",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "(Required) The id of the source"
+        },
+        {
+          "id": "f9293996-8089-44de-bbf1-2ecbfe3c70ef",
+          "key": "languages",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The language of the source"
+        },
+        {
+          "id": "694db2c1-8c90-438f-b42a-6e08b50bb60a",
+          "key": "languages",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The language of the source"
+        }
+      ],
+      "variable": []
+    },
+    "method": "DELETE",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

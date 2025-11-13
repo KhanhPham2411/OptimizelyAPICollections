@@ -2,7 +2,7 @@
   "variables": [
     {
       "id": "imported_9",
-      "key": "Optimizely__ContentGraph__GatewayAddress",
+      "key": "GatewayAddress",
       "value": "",
       "type": "text",
       "privacy": "PRIVATE",
@@ -10,7 +10,7 @@
     },
     {
       "id": "imported_10",
-      "key": "Optimizely__ContentGraph__AppKey",
+      "key": "AppKey",
       "value": "",
       "type": "text",
       "privacy": "PRIVATE",
@@ -18,7 +18,7 @@
     },
     {
       "id": "imported_11",
-      "key": "Optimizely__ContentGraph__Secret",
+      "key": "AppSecret",
       "value": "",
       "type": "text",
       "privacy": "PRIVATE",
@@ -26,7 +26,7 @@
     },
     {
       "id": "imported_12",
-      "key": "Optimizely__ContentGraph__SingleKey",
+      "key": "SingleKey",
       "value": "",
       "type": "text",
       "privacy": "PRIVATE",

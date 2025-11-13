@@ -1,0 +1,85 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Update source metadata",
+    "description": {
+      "content": "Update `label`, `description` fields of the source",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/content/v3/sources?id=%3Cstring%3E&slot=%3Cstring%3E",
+      "path": [
+        "api",
+        "content",
+        "v3",
+        "sources"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "ebc080b7-7417-43c9-b686-ab88f2128a63",
+          "key": "id",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "(Required) The id of the source"
+        },
+        {
+          "id": "8ea7087b-7a99-44ae-9a4e-aeb1f3649b18",
+          "key": "slot",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The slot of the source _(optional)_\n- _(empty): old slot_\n- _**new**: new slot_"
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "method": "POST",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"label\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "List synonyms",
+    "description": {
+      "content": "Get synonyms for a given slot",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/resources/synonyms?language_routing=%3Cstring%3E&source_routing=%3Cstring%3E&synonym_slot=one",
+      "path": [
+        "resources",
+        "synonyms"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "2307ff6c-0455-4de3-85ee-c2d8b55ea382",
+          "key": "language_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "e9c3ef8a-802a-444a-88e6-a2a8a6c6d2e6",
+          "key": "source_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "08cfefff-a171-4e72-a0a2-10f76fc960ff",
+          "key": "synonym_slot",
+          "value": "one",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "GET",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

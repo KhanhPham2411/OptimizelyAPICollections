@@ -1,0 +1,65 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Delete synonyms",
+    "description": {},
+    "url": {
+      "raw": "{{baseUrl}}/resources/synonyms?language_routing=%3Cstring%3E&source_routing=%3Cstring%3E",
+      "path": [
+        "resources",
+        "synonyms"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "2ae76909-0e1a-4fcf-8bca-a47614092008",
+          "key": "language_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "cd058f17-5a25-4ea9-99f2-00b296bc9cfc",
+          "key": "source_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        }
+      ],
+      "variable": []
+    },
+    "method": "DELETE",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

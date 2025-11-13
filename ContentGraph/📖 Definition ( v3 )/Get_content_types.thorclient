@@ -1,0 +1,68 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Get content types",
+    "description": {
+      "content": "Get content types of the source",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/content/v3/types?id=default",
+      "path": [
+        "api",
+        "content",
+        "v3",
+        "types"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "3ea3080a-493b-4454-9d19-d835a4a46faf",
+          "key": "id",
+          "value": "default",
+          "type": "string",
+          "disabled": false,
+          "description": "The id of the source"
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "GET",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

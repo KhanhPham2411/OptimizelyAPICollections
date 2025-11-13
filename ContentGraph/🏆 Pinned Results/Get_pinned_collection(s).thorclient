@@ -1,0 +1,67 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Get pinned collection(s)",
+    "description": {
+      "content": "Get pinned collections",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/pinned/collections?page=%3Cdouble%3E",
+      "path": [
+        "api",
+        "pinned",
+        "collections"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "855dd444-8417-4e2c-ba13-92483cc1b18e",
+          "key": "page",
+          "value": "<double>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "GET",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

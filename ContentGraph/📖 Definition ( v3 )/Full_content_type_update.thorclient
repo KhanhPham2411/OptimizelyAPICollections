@@ -1,0 +1,77 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Full content type update",
+    "description": {
+      "content": "Update content types of the source (overwrite all)",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/content/v3/types?id=default",
+      "path": [
+        "api",
+        "content",
+        "v3",
+        "types"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "de58f20a-8fc0-4fe0-b0bc-fe27014bfaa1",
+          "key": "id",
+          "value": "default",
+          "type": "string",
+          "disabled": false,
+          "description": "The id of the source"
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "method": "PUT",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"preset\": \"<string>\",\n  \"useTypedFieldNames\": \"<boolean>\",\n  \"description\": \"<string>\",\n  \"label\": \"<string>\",\n  \"links\": {\n    \"key_0\": {\n      \"to\": \"<string>\",\n      \"from\": \"<string>\"\n    },\n    \"key_1\": {\n      \"to\": \"<string>\",\n      \"from\": \"<string>\"\n    }\n  },\n  \"propertyTypes\": {\n    \"key_0\": {\n      \"base\": \"<string>\",\n      \"abstract\": \"<boolean>\",\n      \"properties\": {\n        \"key_0\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"key_1\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"key_2\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      }\n    },\n    \"key_1\": {\n      \"base\": \"<string>\",\n      \"abstract\": \"<boolean>\",\n      \"properties\": {\n        \"key_0\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"key_1\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"contentTypes\": {\n    \"key_0\": {\n      \"contentType\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"properties\": {\n        \"key_0\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"helpText\": \"<string>\"\n        },\n        \"key_1\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"helpText\": \"<string>\"\n        },\n        \"key_2\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"helpText\": \"<string>\"\n        }\n      },\n      \"displayName\": \"<string>\",\n      \"sortOrder\": \"<double>\",\n      \"description\": \"<string>\",\n      \"base\": \"<string>\",\n      \"abstract\": \"<boolean>\"\n    },\n    \"key_1\": {\n      \"contentType\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"properties\": {\n        \"key_0\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"helpText\": \"<string>\"\n        }\n      },\n      \"displayName\": \"<string>\",\n      \"sortOrder\": \"<double>\",\n      \"description\": \"<string>\",\n      \"base\": \"<string>\",\n      \"abstract\": \"<boolean>\"\n    },\n    \"key_2\": {\n      \"contentType\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"properties\": {\n        \"key_0\": {\n          \"type\": \"<string>\",\n          \"searchable\": \"<boolean>\",\n          \"index\": \"<boolean>\",\n          \"ref\": {\n            \"id\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"helpText\": \"<string>\"\n        }\n      },\n      \"displayName\": \"<string>\",\n      \"sortOrder\": \"<double>\",\n      \"description\": \"<string>\",\n      \"base\": \"<string>\",\n      \"abstract\": \"<boolean>\"\n    }\n  }\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

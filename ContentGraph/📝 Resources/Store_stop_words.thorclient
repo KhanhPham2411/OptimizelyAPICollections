@@ -1,0 +1,78 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Store stop words",
+    "description": {
+      "content": "Stop words are the words in a stop list (or stop list or negative dictionary) which are filtered out (stopped) before or after processing of natural language data (text) because they are insignificant",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/resources/stopwords?language_routing=%3Cstring%3E&source_routing=%3Cstring%3E",
+      "path": [
+        "resources",
+        "stopwords"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "554fde70-94ba-4343-9533-6cbd9db56ba8",
+          "key": "language_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "7d1e4d08-1c35-419a-a7eb-aac635658eb6",
+          "key": "source_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "text/plain"
+      }
+    ],
+    "method": "PUT",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "<string>"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Delete webhook",
+    "description": {
+      "content": "Delete a registered webhook with `id`",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/webhooks/:id",
+      "path": [
+        "api",
+        "webhooks",
+        ":id"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [
+        {
+          "disabled": false,
+          "type": "any",
+          "value": "<string>",
+          "key": "id",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "method": "DELETE",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

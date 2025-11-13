@@ -1,0 +1,78 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Delete source",
+    "description": {
+      "content": "Delete content _types / data_ of the source",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/content/v3/sources?id=%3Cstring%3E&mode=%3Cstring%3E&slot=%3Cstring%3E",
+      "path": [
+        "api",
+        "content",
+        "v3",
+        "sources"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "f81097ef-61e9-4503-9735-3eb1fc850ba5",
+          "key": "id",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The id of the source\n- _(empty): all sources_\n- _**default**: only default source_\n- _**src1**:  only src1_"
+        },
+        {
+          "id": "09f6de0e-bd41-406e-97ad-6a3bc5f285c2",
+          "key": "mode",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "Delete mode\n\n| mode         | description             | types       | data        |\n| --           | --                      | --          | --          |\n| _(empty)_    | _delete types and data_ | _(delete)_  | _(delete)_  |\n| _**types**_  | _delete only types_     | _(delete)_  |             |\n| _**data**_   | _delete only data_      |             | _(delete)_  |\n| _**reset**_  | _reset data_            | _(delete)_  | _(reset)_   |"
+        },
+        {
+          "id": "42ea496b-8b10-4a6d-9814-c123c77ecd75",
+          "key": "slot",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The slot of the source _(optional)_\n- _(empty): old slot_\n- _**new**: new slot_"
+        }
+      ],
+      "variable": []
+    },
+    "method": "DELETE",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

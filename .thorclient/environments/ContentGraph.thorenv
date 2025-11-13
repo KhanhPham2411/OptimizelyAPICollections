@@ -1,20 +1,44 @@
 {
   "variables": [
     {
-      "id": "274e55e6-c021-4bcf-921c-e8a0d88efe96",
-      "key": "Optimizely__ContentGraph__GatewayAddress",
-      "disabled": false,
+      "id": "5f1daf1a-81e7-4168-ab00-f9d621bc9b3b",
+      "key": "GatewayAddress",
+      "value": "https://staging.cg.optimizely.com",
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "disabled": false,
+      "updated": 1763051930580,
+      "updateSource": "ENVIRONMENT"
     },
     {
-      "id": "36b07eb8-2e76-437b-8225-bb2de2f097d6",
-      "key": "Optimizely__ContentGraph__SingleKey",
-      "disabled": false,
+      "id": "17aed1d8-0a70-441f-aa7b-5e24cd4f94db",
+      "key": "AppKey",
+      "value": "",
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "disabled": false,
+      "updated": 1763051911233,
+      "updateSource": "ENVIRONMENT"
+    },
+    {
+      "id": "fb635fd1-b88f-4bdb-ab90-71b61f191771",
+      "key": "AppSecret",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false,
+      "updated": 1763051917392,
+      "updateSource": "ENVIRONMENT"
+    },
+    {
+      "id": "568d7fab-b151-4b69-b2b4-bb0c36c36da7",
+      "key": "SingleKey",
+      "value": "",
+      "type": "text",
+      "privacy": "PRIVATE",
+      "disabled": false,
+      "updated": 1763051922626,
+      "updateSource": "ENVIRONMENT"
     }
   ]
 }

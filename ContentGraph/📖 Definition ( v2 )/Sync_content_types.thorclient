@@ -1,0 +1,67 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Sync content types",
+    "description": {
+      "content": "Synchronize content types from one source",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/content/v2/types",
+      "path": [
+        "api",
+        "content",
+        "v2",
+        "types"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "method": "POST",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"useTypedFieldNames\": \"<boolean>\",\n  \"links\": {\n    \"key_0\": {\n      \"to\": \"<string>\",\n      \"from\": \"<string>\"\n    },\n    \"key_1\": {\n      \"to\": \"<string>\",\n      \"from\": \"<string>\"\n    }\n  }\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

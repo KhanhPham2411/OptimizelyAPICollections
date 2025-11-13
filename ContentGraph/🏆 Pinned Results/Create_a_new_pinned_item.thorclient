@@ -1,0 +1,80 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Create a new pinned item",
+    "description": {
+      "content": "Create a new pinned item, collectionId must be created before creating pinned item",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/pinned/collections/:collectionId/items",
+      "path": [
+        "api",
+        "pinned",
+        "collections",
+        ":collectionId",
+        "items"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [
+        {
+          "disabled": false,
+          "type": "any",
+          "value": "<string>",
+          "key": "collectionId",
+          "description": "(Required) pinned collection id"
+        }
+      ]
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "POST",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"phrases\": \"<string>\",\n  \"targetKey\": \"<string>\",\n  \"language\": null,\n  \"priority\": 1000,\n  \"isActive\": true\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

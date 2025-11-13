@@ -1,0 +1,79 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Update a pinned collection",
+    "description": {
+      "content": "Update pinned collection by Id",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/pinned/collections/:collectionId",
+      "path": [
+        "api",
+        "pinned",
+        "collections",
+        ":collectionId"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [
+        {
+          "disabled": false,
+          "type": "any",
+          "value": "<string>",
+          "key": "collectionId",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "PUT",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"title\": \"<string>\",\n  \"key\": \"<string>\",\n  \"isActive\": false\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Update a bestbet collection",
+    "description": {
+      "content": "Update bestbet collection by Id",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/bestbets/collection/:id",
+      "path": [
+        "api",
+        "bestbets",
+        "collection",
+        ":id"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [
+        {
+          "disabled": false,
+          "type": "any",
+          "value": "<string>",
+          "key": "id",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "PUT",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"title\": \"<string>\"\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

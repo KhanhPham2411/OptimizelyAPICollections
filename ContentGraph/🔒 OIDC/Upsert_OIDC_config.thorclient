@@ -1,0 +1,66 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Upsert OIDC config",
+    "description": {
+      "content": "Enable OIDC support for the current account",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/config/oidc",
+      "path": [
+        "api",
+        "config",
+        "oidc"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "method": "PUT",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"audience\": \"<string>\",\n  \"issuer\": \"<string>\"\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

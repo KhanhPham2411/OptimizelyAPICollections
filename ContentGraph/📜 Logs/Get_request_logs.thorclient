@@ -1,0 +1,99 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Get request logs",
+    "description": {
+      "content": "Get _incoming/outgoing_ request logs",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/logs/request?page=%3Cdouble%3E&requestId=%3Cstring%3E&host=%3Cstring%3E&path=%3Cstring%3E&success=%3Cboolean%3E",
+      "path": [
+        "api",
+        "logs",
+        "request"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "7e6e05bc-4b7d-4d53-93e6-18c64acff36d",
+          "key": "page",
+          "value": "<double>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "424ad70e-024a-4789-ba83-04653bb83deb",
+          "key": "requestId",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "b0e501a8-526d-4628-81d8-0ffccda0e604",
+          "key": "host",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "fe81a2a5-21a7-4ac5-b67a-49e23b05e746",
+          "key": "path",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "01b5313d-05ef-4cb1-bb0a-322b642b1fe3",
+          "key": "success",
+          "value": "<boolean>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "GET",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

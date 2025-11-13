@@ -1,0 +1,61 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Clear pinned items in collection",
+    "description": {
+      "content": "Clear pinned items in collection",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/pinned/collections/:collectionId/items",
+      "path": [
+        "api",
+        "pinned",
+        "collections",
+        ":collectionId",
+        "items"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [
+        {
+          "disabled": false,
+          "type": "any",
+          "value": "<string>",
+          "key": "collectionId",
+          "description": "(Required) pinned collection id"
+        }
+      ]
+    },
+    "method": "DELETE",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

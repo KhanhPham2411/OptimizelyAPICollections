@@ -1,0 +1,76 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Get source metadata",
+    "description": {
+      "content": "Get `id`, `label`, `description` and `languages` fields of the source",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/content/v3/sources?id=%3Cstring%3E&slot=%3Cstring%3E",
+      "path": [
+        "api",
+        "content",
+        "v3",
+        "sources"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "51d70d3e-1964-4b76-92d6-a2ee7b0261ec",
+          "key": "id",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The id of the source _(optional)_\n- _(empty): all sources_\n- _**default**: only default source_\n- _**src1**:  only src1_"
+        },
+        {
+          "id": "5048841e-cb19-444c-9b45-f126f76e9e3a",
+          "key": "slot",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The slot of the source _(optional)_\n- _(empty): old slot_\n- _**new**: new slot_"
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "GET",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

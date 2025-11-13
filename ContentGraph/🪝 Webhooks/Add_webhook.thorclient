@@ -1,0 +1,65 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Add webhook",
+    "description": {
+      "content": "Register a webhook and listen events respect to filter definition\n\n---\n\n_(empty filter): listen all events_",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/webhooks",
+      "path": [
+        "api",
+        "webhooks"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "method": "POST",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"request\": {\n    \"url\": \"<string>\",\n    \"method\": \"<string>\",\n    \"headers\": {\n      \"key_0\": \"<string>\",\n      \"key_1\": \"<string>\",\n      \"key_2\": \"<string>\"\n    }\n  },\n  \"disabled\": \"<boolean>\",\n  \"topics\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"key_0\": {\n        \"in\": \"<string>\",\n        \"eq\": \"<string>\"\n      }\n    },\n    {\n      \"key_0\": {\n        \"in\": \"<string>\",\n        \"eq\": \"<string>\"\n      }\n    }\n  ]\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

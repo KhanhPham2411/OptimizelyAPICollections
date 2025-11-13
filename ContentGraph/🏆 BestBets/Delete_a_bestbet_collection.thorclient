@@ -1,0 +1,60 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Delete a bestbet collection",
+    "description": {
+      "content": "Delete bestbet by Id",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/bestbets/collection/:id",
+      "path": [
+        "api",
+        "bestbets",
+        "collection",
+        ":id"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [
+        {
+          "disabled": false,
+          "type": "any",
+          "value": "<string>",
+          "key": "id",
+          "description": "(Required) "
+        }
+      ]
+    },
+    "method": "DELETE",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

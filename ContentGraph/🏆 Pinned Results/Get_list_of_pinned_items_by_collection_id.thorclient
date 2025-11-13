@@ -1,0 +1,101 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Get list of pinned items by collection id",
+    "description": {
+      "content": "Get list of pinned items by given pinned collection id",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/api/pinned/collections/:collectionId/items?limit=%3Cdouble%3E&offset=%3Cdouble%3E&phrase=%3Cstring%3E&sort=%3Cstring%3E",
+      "path": [
+        "api",
+        "pinned",
+        "collections",
+        ":collectionId",
+        "items"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "fbe1df63-9b9c-4d7b-ae0a-c708cc187c68",
+          "key": "limit",
+          "value": "<double>",
+          "type": "string",
+          "disabled": false,
+          "description": "Limit items"
+        },
+        {
+          "id": "6dbb91e3-60f4-4997-8eef-58c24e3aab31",
+          "key": "offset",
+          "value": "<double>",
+          "type": "string",
+          "disabled": false,
+          "description": "From offset number"
+        },
+        {
+          "id": "ddffaa55-84d9-4b3b-ad23-ce58c07bd8fe",
+          "key": "phrase",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "Phrase to be filtered"
+        },
+        {
+          "id": "dcc7e802-e1f4-4113-bdce-51a9d64bb22d",
+          "key": "sort",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": "The sort field, default direction is ASC. Add a minus/dash symbol for DESC (example \"-phrase\"). Default value created_at DESC."
+        }
+      ],
+      "variable": [
+        {
+          "disabled": false,
+          "type": "any",
+          "value": "<string>",
+          "key": "collectionId",
+          "description": "(Required) pinned collection id"
+        }
+      ]
+    },
+    "header": [
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "GET",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

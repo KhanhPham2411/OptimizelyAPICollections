@@ -1,0 +1,86 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Store synonyms",
+    "description": {
+      "content": "When you write a query, you can use synonyms to expand the keywords to get results that users otherwise may not have found.\nThis reduces the problem of getting too few or no results, leading to fewer chances of conversions or even search abandonment.\nFor example, if you search for \"H2O\", you mat want to find results that contain \"water\".\nThis happens when you store synonyms in Optimizely Graph and enable them per field in your query. Otherwise, many relevant results may not be retrieved.",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/resources/synonyms?language_routing=%3Cstring%3E&source_routing=%3Cstring%3E&synonym_slot=one",
+      "path": [
+        "resources",
+        "synonyms"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "0673de58-32a8-48ef-84b4-706993014a8a",
+          "key": "language_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "26dd14dc-721c-4955-a83d-7d83134ed6d1",
+          "key": "source_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "555b5bc9-4956-47a8-8e5d-fb141573dd4c",
+          "key": "synonym_slot",
+          "value": "one",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        }
+      ],
+      "variable": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "text/plain"
+      }
+    ],
+    "method": "PUT",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    },
+    "body": {
+      "mode": "raw",
+      "raw": "<string>"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Delete stop words",
+    "description": {},
+    "url": {
+      "raw": "{{baseUrl}}/resources/stopwords?language_routing=%3Cstring%3E&source_routing=%3Cstring%3E",
+      "path": [
+        "resources",
+        "stopwords"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "query": [
+        {
+          "id": "31685501-e005-40a2-828a-8858292b1156",
+          "key": "language_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        },
+        {
+          "id": "cb0c6c36-a8d8-4227-aa49-3adb6aded45b",
+          "key": "source_routing",
+          "value": "<string>",
+          "type": "string",
+          "disabled": false,
+          "description": ""
+        }
+      ],
+      "variable": []
+    },
+    "method": "DELETE",
+    "auth": {
+      "type": "apikey",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "Authorization"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "header"
+        }
+      ]
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}
