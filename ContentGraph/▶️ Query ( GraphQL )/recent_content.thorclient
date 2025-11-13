@@ -82,9 +82,6 @@
       }
     ]
   },
-  "backup": {
-    "graphqlQuery": "query RecentContent {\n  Content(\n    orderBy: {Saved: DESC}\n    limit: 3\n\n  ) {\n    items {\n      Name\n      ContentLink {\n        Id\n        WorkId\n        GuidValue\n      }\n      Status\n      IsCommonDraft\n      Saved\n      Created\n      ParentLink {\n        Id\n        WorkId\n      }\n      Language {\n        Name\n      }\n    }\n    total\n  }\n}"
-  },
   "response": {
     "keys": [
       "data",
