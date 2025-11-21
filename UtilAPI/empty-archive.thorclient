@@ -1,0 +1,36 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "url": {
+      "raw": "{{SiteUrl}}/util-api/custom-archive-cleanup/empty-archive",
+      "query": []
+    },
+    "method": "POST",
+    "header": [
+      {
+        "id": "9c8e047f-86eb-4905-a878-f4cd49250673",
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}",
+        "disabled": false,
+        "type": "text"
+      }
+    ]
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "success",
+      "message"
+    ]
+  }
+}
