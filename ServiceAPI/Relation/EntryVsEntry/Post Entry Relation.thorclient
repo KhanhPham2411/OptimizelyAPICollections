@@ -1,0 +1,49 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\r\n    \"ParentEntryCode\": \"P-39813617\",\r\n    \"ChildEntryCode\": \"SKU-36127195\",\r\n    \"RelationType\": \"ProductVariation\",\r\n    \"Quantity\": 1,\r\n    \"SortOrder\": 0\r\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/entries/P-39813617/entryrelations",
+      "query": []
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "SortOrder",
+      "Quantity",
+      "RelationType",
+      "GroupName",
+      "ParentEntryCode",
+      "ChildEntryCode"
+    ]
+  }
+}
