@@ -17,12 +17,13 @@
           "key": "test2",
           "disabled": false,
           "type": "file",
-          "src": "e:/Personal/Projects/20240708_ThorAPI/thorclient-solution/references/OptimizelyAPICollections/ServiceAPI/ImportFiles/MediaImportSample_create/MediaImportSample_create.zip"
+          "src": "c:/KhanhPham/OptimizelyAPICollections/ServiceAPI/ImportFiles/MediaImport_TestSortOrder/MediaImport_TestSortOrder.zip"
         }
       ]
     },
     "url": {
-      "raw": "{{SiteUrl}}/episerverapi/commerce/import/assets"
+      "raw": "{{SiteUrl}}/episerverapi/commerce/import/assets",
+      "query": []
     }
   },
   "event": {

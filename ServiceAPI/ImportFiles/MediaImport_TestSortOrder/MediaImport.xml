@@ -11,7 +11,7 @@
   <MediaGroup mediaTypeName="Image" count="3">
     <Media>
       <IntegrationId>53794</IntegrationId>
-      <Name>man-utd-home-shirt-24.jpg</Name>
+      <Name>1.jpg</Name>
       <BlobContent>
         <ExternalUri>https://asset.productmarketingcloud.com/api/assetstorage/6877_10433b88-224b-4efa-a9f5-e5c7290cd8ba</ExternalUri>
       </BlobContent>
@@ -31,7 +31,7 @@
     </Media>
     <Media>
       <IntegrationId>37518</IntegrationId>
-      <Name>42197.jpg</Name>
+      <Name>2.jpg</Name>
       <BlobContent>
         <ExternalUri>https://asset-prod1a-euw.productmarketingcloud.com/api/assetstorage/6877_77346ae3-f891-44b8-ad04-585757a63d52</ExternalUri>
       </BlobContent>
@@ -51,7 +51,7 @@
     </Media>
     <Media>
       <IntegrationId>44136</IntegrationId>
-      <Name>42197_main_42197.jpg</Name>
+      <Name>3.jpg</Name>
       <BlobContent>
         <ExternalUri>https://asset-prod1a-euw.productmarketingcloud.com/api/assetstorage/6877_ae024f24-da52-43af-b865-ef760fdbfc5f</ExternalUri>
       </BlobContent>
