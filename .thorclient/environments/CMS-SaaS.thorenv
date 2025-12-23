@@ -47,6 +47,32 @@
       "type": "text",
       "privacy": "PRIVATE",
       "value": ""
+    },
+    {
+      "id": "ad24a8bd-d880-4823-9c31-fc89f60d1ba5",
+      "key": "ClientID",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    },
+    {
+      "id": "40c21152-ae0e-4adf-b1d0-16ab07c320bf",
+      "key": "ClientSecret",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    },
+    {
+      "id": "47bed5a3-77b4-4932-85df-7fed7d9e76e8",
+      "key": "API_URL",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PUBLIC",
+      "value": "https://api.cms.optimizely.com/",
+      "updated": 1766132425868,
+      "updateSource": "ENVIRONMENT"
     }
   ]
 }

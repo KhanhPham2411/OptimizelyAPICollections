@@ -3,7 +3,7 @@
     "method": "GET",
     "name": "https://example.com/_cms/preview2/contenttypes",
     "url": {
-      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/contenttypes",
+      "raw": "{{OPTIMIZELY_CMS_URL}}/preview3/contenttypes",
       "query": []
     },
     "header": [
@@ -17,12 +17,27 @@
       {
         "id": "5ee98ac1-395e-40a1-8045-9de17eab3d57",
         "key": "Authorization",
-        "value": "bearer {{AccessToken}}",
+        "value": "Bearer {{AccessToken}}",
         "disabled": false,
         "type": "text"
       }
     ],
-    "body": {}
+    "body": {},
+    "auth": {
+      "type": "noauth",
+      "basic": [
+        {
+          "key": "username",
+          "value": "{{AppKey}}",
+          "type": "string"
+        },
+        {
+          "key": "password",
+          "value": "{{AppSecret}}",
+          "type": "string"
+        }
+      ]
+    }
   },
   "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
   "event": {
