@@ -20,17 +20,30 @@
     },
     "header": [
       {
+        "id": "2d7750ed-44f2-4a90-924a-8b2db32fd3a4",
         "key": "Content-Type",
-        "value": "application/json"
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
       },
       {
+        "id": "429fe664-8c9c-46cb-b2cb-80909efdb3a9",
         "key": "Accept",
-        "value": "application/json"
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "662537ef-2f4e-4d85-b26d-fa00559b8ef6",
+        "key": "Authorization",
+        "value": "epi-single {{SingleKey}}",
+        "disabled": false,
+        "type": "text"
       }
     ],
     "method": "POST",
     "auth": {
-      "type": "basic",
+      "type": "noauth",
       "apikey": [
         {
           "key": "key",
@@ -54,6 +67,13 @@
         {
           "key": "password",
           "value": "{{AppSecret}}",
+          "type": "string"
+        }
+      ],
+      "bearer": [
+        {
+          "key": "token",
+          "value": "",
           "type": "string"
         }
       ]
