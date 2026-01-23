@@ -67,7 +67,7 @@
     "setvars": [
       {
         "id": "de575b2a-b4e3-40bd-9ffd-ef4b954ea82b",
-        "key": "AccessToken",
+        "key": "AccessToken-preview2",
         "value": "response.data.access_token",
         "disabled": false,
         "type": "text"

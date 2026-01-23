@@ -6,9 +6,7 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": "https://app-lscc01saas5r1d1t001.cms.optimizely.com/",
-      "updated": 1769160560958,
-      "updateSource": "ENVIRONMENT"
+      "value": ""
     },
     {
       "id": "24569ae2-53d0-4cf9-a73d-31d391cc96af",
@@ -32,9 +30,7 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI3NkQ1NjkxRjVBNDQ2MkUyRkQ5QTVCM0U0MUVFOTM2MjA2OTEzQzgiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIxMGI1NTkxMDBlYjE0NDFhOTAzMzdlNWY4MjFmYmQyMSIsIm5hbWUiOiIxMGI1NTkxMDBlYjE0NDFhOTAzMzdlNWY4MjFmYmQyMSIsIm5iZiI6MTc2OTE2MjczMCwiZXhwIjoxNzY5MTYzMDMwLCJpYXQiOjE3NjkxNjI3MzAsImlzcyI6Im9wdGktY29udGVudC1hcGkiLCJhdWQiOiJvcHRpLWNvbnRlbnQtYXBpIn0.K1tCItBO3eZuz1Xx34R8DcJx0s3FfnxQr3q9zqX2G0LDm8EkP0jO7v1KDjjVXPnEp5blNCU3nsfJXbsO_agFUrddgfnRK3C9Co86JZmebL_liIOWghCi-DRbu_M41u9Fcb6_S8FhLNkk4mpu4Z4q9ZKY-IDvJmuibGj5nltAor2ZQcSFBO5vb5LmmSlJIyHEs4rsmExYrL5nF8HsVWoszkZWhJDocobE9TDPUhXwQoLWk798fZnOHigmDOH0sfMUwlxpRfPvIK77gr-GCVJwIjoogehPbhYK78zmcQs2MeEaEjVEGKY3CSOrysjJpZnCs_UbvGgAqsWbkssX2XO_Ww",
-      "updated": 1769162853869,
-      "updateSource": "ENVIRONMENT"
+      "value": ""
     },
     {
       "id": "bf8ee960-16e2-4106-a76c-c4afc4aa0710",
@@ -50,9 +46,7 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": "",
-      "updated": 1754558358161,
-      "updateSource": "ENVIRONMENT"
+      "value": ""
     },
     {
       "id": "ad24a8bd-d880-4823-9c31-fc89f60d1ba5",
@@ -60,9 +54,7 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": "10b559100eb1441a90337e5f821fbd21",
-      "updated": 1769158914534,
-      "updateSource": "ENVIRONMENT"
+      "value": ""
     },
     {
       "id": "40c21152-ae0e-4adf-b1d0-16ab07c320bf",
@@ -70,9 +62,7 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": "OA2PAaZcVSemeCN0lWoxkITzHCalkMuE1VmfByx3YaUxEzfO",
-      "updated": 1769158918195,
-      "updateSource": "ENVIRONMENT"
+      "value": ""
     },
     {
       "id": "47bed5a3-77b4-4932-85df-7fed7d9e76e8",
@@ -90,7 +80,13 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": "46387500f2cd4ab8ad273e96ec745e1c"
+      "value": ""
+    },
+    {
+      "key": "AccessToken",
+      "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI3NkQ1NjkxRjVBNDQ2MkUyRkQ5QTVCM0U0MUVFOTM2MjA2OTEzQzgiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIxMGI1NTkxMDBlYjE0NDFhOTAzMzdlNWY4MjFmYmQyMSIsIm5hbWUiOiIxMGI1NTkxMDBlYjE0NDFhOTAzMzdlNWY4MjFmYmQyMSIsIm5iZiI6MTc2OTE2MzQ3MiwiZXhwIjoxNzY5MTYzNzcyLCJpYXQiOjE3NjkxNjM0NzIsImlzcyI6Im9wdGktY29udGVudC1hcGkiLCJhdWQiOiJvcHRpLWNvbnRlbnQtYXBpIn0.sOngEtnAOjm8d94SCX79MuZsdrla_0WQeSa7T2ulnzcfmm8tZj6JtH03a46oz_BJ-mV_awQh4uPmMV4dJ3KELxTqAlachb7k-n-nvt5Gt733M7E79UyYNApO4VhqnauEmfGs_GZyY81tdENniy0-5p_h5OeWpzWR4ojq8quhJDj_J86H0rNLtJ0RCvuQ4hKiUeCZ0f0_NpVsAvEZuymGaafdutCfAdxKogJeOl2Uw1rYBXHOBSyzcRXeP4IYaIt2on3ov2vexmUsAwxMpnfgPPEJMfJrLtdEiGJEw7Ds_Qy5KKQmqNU5nyp42jJwfQAm0vk-UPNJac-zqqgge_f_nQ",
+      "updated": 1769163472516,
+      "updateSource": "CMS-SaaS/preview2/access-token.thorclient"
     }
   ]
 }
