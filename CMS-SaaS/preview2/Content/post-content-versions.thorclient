@@ -1,0 +1,71 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "BASE_URL/_cms/preview2/content/$CONTENT_KEY/versions",
+    "url": {
+      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/content/{{ContentID}}/versions",
+      "query": []
+    },
+    "header": [
+      {
+        "id": "40d31eda-ac92-400d-a91b-ce3359c8660c",
+        "key": "Authorization",
+        "value": "Bearer {{AccessToken-preview2}}",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "c4acf361-7c70-44bb-a4c0-0cf881c0d70d",
+        "key": "Content-Type",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "960acd36-11d6-4775-abe6-00398047c2a6",
+        "key": "Accept",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{{PostContentJson}}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "backup": {
+    "bodyType": "raw",
+    "bodySubType": "json",
+    "rawData": "{\n  \"key\": \"46387500f2cd4ab8ad273e96ec745e1c\",\n  \"container\": \"4b10cab96a4d462f8ccbef33d1dc2c24\",\n  \"contentType\": \"LegacyCmsPage\",\n  \"displayName\": \"Nutrient Removal\",\n  \"locale\": \"en\",\n  \"routeSegment\": \"nutrient-removal\",\n  \"properties\": {\n    \"title\": \"Nutrient Removal\",\n    \"headerContent\": [\n      {\n        \"name\": \"[solution=nutrient-removal] wol-small-leaderboard\",\n        \"displayOption\": \"\",\n        \"segmentationGroup\": \"\",\n        \"segments\": [],\n        \"reference\": \"\",\n        \"contentType\": \"ComponentAdSlotBlock\",\n        \"content\": {\n          \"adSlotType\": \"leaderboard\",\n          \"adSlotTargeting\": [\n            {\n              \"targetingKey\": \"solution\",\n              \"targetingValues\": [\n                \"nutrient-removal\"\n              ]\n            }\n          ]\n        }\n      }\n    ],\n    \"seoSettings\": {\n      \"metaTitle\": \"Nutrient Removal\",\n      \"metaDescription\": \"Nutrient Removal\",\n      \"robotsNoIndex\": false,\n      \"robotsNoFollow\": false\n    }\n  },\n  \"status\": \"published\"\n}"
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "type",
+      "title",
+      "status",
+      "detail",
+      "instance",
+      "errors",
+      "code",
+      "traceId"
+    ]
+  }
+}

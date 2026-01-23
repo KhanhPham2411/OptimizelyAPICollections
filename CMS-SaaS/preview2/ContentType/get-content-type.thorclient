@@ -1,0 +1,59 @@
+{
+  "request": {
+    "method": "GET",
+    "name": "BASE_URL/_cms/preview2/content-types/ComponentAdSlotBlock",
+    "url": {
+      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/contenttypes/{{TypeKey}}",
+      "query": []
+    },
+    "header": [
+      {
+        "id": "18ded9d4-ffea-4195-b2b0-9e8047495cd6",
+        "key": "Authorization",
+        "value": "Bearer {{AccessToken-preview2}}",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "7617d1b3-b15f-4ed7-9675-a4a714b73194",
+        "key": "Accept",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {}
+  },
+  "backup": {},
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "key",
+      "displayName",
+      "description",
+      "baseType",
+      "source",
+      "sortOrder",
+      "features",
+      "usage",
+      "mayContainTypes",
+      "mediaFileExtensions",
+      "compositionBehaviors",
+      "created",
+      "lastModified",
+      "lastModifiedBy",
+      "properties"
+    ]
+  }
+}
