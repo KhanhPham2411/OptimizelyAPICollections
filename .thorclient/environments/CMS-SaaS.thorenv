@@ -6,7 +6,9 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "value": "https://app-lscc01saas5r1d1t001.cms.optimizely.com/",
+      "updated": 1769160560958,
+      "updateSource": "ENVIRONMENT"
     },
     {
       "id": "24569ae2-53d0-4cf9-a73d-31d391cc96af",
@@ -26,11 +28,13 @@
     },
     {
       "id": "29f52fc3-6015-41e4-a24d-fc78b9bfdec3",
-      "key": "AccessToken",
+      "key": "AccessToken-preview2",
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI3NkQ1NjkxRjVBNDQ2MkUyRkQ5QTVCM0U0MUVFOTM2MjA2OTEzQzgiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIxMGI1NTkxMDBlYjE0NDFhOTAzMzdlNWY4MjFmYmQyMSIsIm5hbWUiOiIxMGI1NTkxMDBlYjE0NDFhOTAzMzdlNWY4MjFmYmQyMSIsIm5iZiI6MTc2OTE2MjczMCwiZXhwIjoxNzY5MTYzMDMwLCJpYXQiOjE3NjkxNjI3MzAsImlzcyI6Im9wdGktY29udGVudC1hcGkiLCJhdWQiOiJvcHRpLWNvbnRlbnQtYXBpIn0.K1tCItBO3eZuz1Xx34R8DcJx0s3FfnxQr3q9zqX2G0LDm8EkP0jO7v1KDjjVXPnEp5blNCU3nsfJXbsO_agFUrddgfnRK3C9Co86JZmebL_liIOWghCi-DRbu_M41u9Fcb6_S8FhLNkk4mpu4Z4q9ZKY-IDvJmuibGj5nltAor2ZQcSFBO5vb5LmmSlJIyHEs4rsmExYrL5nF8HsVWoszkZWhJDocobE9TDPUhXwQoLWk798fZnOHigmDOH0sfMUwlxpRfPvIK77gr-GCVJwIjoogehPbhYK78zmcQs2MeEaEjVEGKY3CSOrysjJpZnCs_UbvGgAqsWbkssX2XO_Ww",
+      "updated": 1769162853869,
+      "updateSource": "ENVIRONMENT"
     },
     {
       "id": "bf8ee960-16e2-4106-a76c-c4afc4aa0710",
@@ -46,7 +50,9 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "value": "",
+      "updated": 1754558358161,
+      "updateSource": "ENVIRONMENT"
     },
     {
       "id": "ad24a8bd-d880-4823-9c31-fc89f60d1ba5",
@@ -54,7 +60,9 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "value": "10b559100eb1441a90337e5f821fbd21",
+      "updated": 1769158914534,
+      "updateSource": "ENVIRONMENT"
     },
     {
       "id": "40c21152-ae0e-4adf-b1d0-16ab07c320bf",
@@ -62,7 +70,9 @@
       "disabled": false,
       "type": "text",
       "privacy": "PRIVATE",
-      "value": ""
+      "value": "OA2PAaZcVSemeCN0lWoxkITzHCalkMuE1VmfByx3YaUxEzfO",
+      "updated": 1769158918195,
+      "updateSource": "ENVIRONMENT"
     },
     {
       "id": "47bed5a3-77b4-4932-85df-7fed7d9e76e8",
@@ -73,6 +83,14 @@
       "value": "https://api.cms.optimizely.com/",
       "updated": 1766132425868,
       "updateSource": "ENVIRONMENT"
+    },
+    {
+      "id": "646cbbef-8db3-4ae8-9ec9-5b60c3a54e5c",
+      "key": "ContentID",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": "46387500f2cd4ab8ad273e96ec745e1c"
     }
   ]
 }

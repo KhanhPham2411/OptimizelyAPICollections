@@ -3,7 +3,7 @@
     "method": "GET",
     "name": "https://example.com/_cms/preview2/content/test",
     "url": {
-      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/content/2149",
+      "raw": "{{API_URL}}/preview3/experimental/content/{{ContentID}}",
       "query": []
     },
     "header": [
@@ -41,6 +41,7 @@
       "type",
       "title",
       "status",
+      "detail",
       "instance",
       "traceId"
     ]

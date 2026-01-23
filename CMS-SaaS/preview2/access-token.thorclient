@@ -3,7 +3,7 @@
     "method": "POST",
     "name": "https://example.com/_cms/preview2/oauth/token",
     "url": {
-      "raw": "{{API_URL}}/oauth/token",
+      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/oauth/token",
       "query": []
     },
     "header": [
@@ -76,9 +76,9 @@
   },
   "response": {
     "keys": [
-      "token_type",
       "access_token",
-      "expires_in"
+      "expires_in",
+      "token_type"
     ]
   }
 }

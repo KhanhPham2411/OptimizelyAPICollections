@@ -1,23 +1,23 @@
 {
   "request": {
     "method": "GET",
-    "name": "https://example.com/_cms/preview2/contenttypes",
+    "name": "https://example.com/_cms/preview2/content/test",
     "url": {
-      "raw": "{{API_URL}}/preview3/contenttypes",
+      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/content/{{ContentID}}/versions",
       "query": []
     },
     "header": [
       {
-        "id": "6eb495b0-ca19-412d-985b-7c963783e178",
+        "id": "4d4e3fa3-28fd-41f3-9c92-b6573c47eb09",
         "key": "accept",
         "value": "application/json",
         "disabled": false,
         "type": "text"
       },
       {
-        "id": "5ee98ac1-395e-40a1-8045-9de17eab3d57",
+        "id": "872a2c36-bd09-4c29-854e-a0a2f82aa1b4",
         "key": "Authorization",
-        "value": "Bearer {{AccessToken}}",
+        "value": "bearer {{AccessToken-preview2}}",
         "disabled": false,
         "type": "text"
       }
@@ -28,12 +28,12 @@
       "basic": [
         {
           "key": "username",
-          "value": "{{AppKey}}",
+          "value": "{{ClientID}}",
           "type": "string"
         },
         {
           "key": "password",
-          "value": "{{AppSecret}}",
+          "value": "{{ClientSecret}}",
           "type": "string"
         }
       ]
@@ -49,17 +49,14 @@
         "type": "text",
         "operator": "=="
       }
-    ],
-    "setvars": []
+    ]
   },
   "response": {
     "keys": [
-      "type",
-      "title",
-      "status",
-      "detail",
-      "instance",
-      "traceId"
+      "items",
+      "pageIndex",
+      "pageSize",
+      "totalItemCount"
     ]
   }
 }
