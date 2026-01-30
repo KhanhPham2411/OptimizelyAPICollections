@@ -1,0 +1,22 @@
+{
+  "variables": [
+    {
+      "id": "06dd2977-ca3b-47c0-8efd-75baa44b61d3",
+      "key": "baseUrl",
+      "value": "",
+      "disabled": false,
+      "type": "text",
+      "updated": 1769679336335,
+      "updateSource": "Import from Postman"
+    },
+    {
+      "id": "706a1970-d1cd-4c9d-a640-77ad1b4b48eb",
+      "key": "apiKey",
+      "value": "",
+      "disabled": false,
+      "type": "text",
+      "updated": 1769679336335,
+      "updateSource": "Import from Postman"
+    }
+  ]
+}

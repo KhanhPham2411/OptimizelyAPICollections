@@ -19,20 +19,13 @@
       ],
       "query": [
         {
-          "id": "ebc080b7-7417-43c9-b686-ab88f2128a63",
-          "key": "id",
-          "value": "<string>",
-          "type": "string",
-          "disabled": false,
-          "description": "(Required) The id of the source"
-        },
-        {
-          "id": "8ea7087b-7a99-44ae-9a4e-aeb1f3649b18",
+          "id": "84d793ee-4639-4fa0-af8d-8538fa044fa5",
           "key": "slot",
           "value": "<string>",
           "type": "string",
           "disabled": false,
-          "description": "The slot of the source _(optional)_\n- _(empty): old slot_\n- _**new**: new slot_"
+          "description": "(Required) The id of the source",
+          "isFound": true
         }
       ],
       "variable": []

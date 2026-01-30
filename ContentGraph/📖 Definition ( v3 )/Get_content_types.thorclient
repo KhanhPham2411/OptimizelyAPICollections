@@ -7,7 +7,7 @@
       "type": "text/plain"
     },
     "url": {
-      "raw": "{{baseUrl}}/api/content/v3/types?id=default",
+      "raw": "{{GatewayAddress}}/api/content/v3/types?id=default",
       "path": [
         "api",
         "content",
@@ -19,12 +19,13 @@
       ],
       "query": [
         {
-          "id": "3ea3080a-493b-4454-9d19-d835a4a46faf",
+          "id": "41e07d1b-1b2d-45e8-a618-09b7e9152196",
           "key": "id",
           "value": "default",
           "type": "string",
           "disabled": false,
-          "description": "The id of the source"
+          "description": "The id of the source",
+          "isFound": true
         }
       ],
       "variable": []
@@ -37,7 +38,7 @@
     ],
     "method": "GET",
     "auth": {
-      "type": "apikey",
+      "type": "basic",
       "apikey": [
         {
           "key": "key",
@@ -51,6 +52,25 @@
           "key": "in",
           "value": "header"
         }
+      ],
+      "basic": [
+        {
+          "key": "username",
+          "value": "{{AppKey}}",
+          "type": "string"
+        },
+        {
+          "key": "password",
+          "value": "{{AppSecret}}",
+          "type": "string"
+        }
+      ],
+      "bearer": [
+        {
+          "key": "token",
+          "value": "WZaIaN3yPkzEfv1eIcH4bHHIjahXsNnhjF0ThEnJVlmQnA52",
+          "type": "string"
+        }
       ]
     }
   },
@@ -63,6 +83,18 @@
         "type": "text",
         "operator": "=="
       }
+    ]
+  },
+  "response": {
+    "keys": [
+      "languages",
+      "contentTypes",
+      "propertyTypes",
+      "preset",
+      "links",
+      "useTypedFieldNames",
+      "label",
+      "description"
     ]
   }
 }
