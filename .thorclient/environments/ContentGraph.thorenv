@@ -31,6 +31,14 @@
       "type": "text",
       "privacy": "PRIVATE",
       "disabled": false
+    },
+    {
+      "id": "283e5a71-802a-43ca-8bd1-52bb1e3bb6b1",
+      "key": "TypeName",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
     }
   ]
 }

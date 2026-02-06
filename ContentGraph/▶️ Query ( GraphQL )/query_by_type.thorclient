@@ -1,0 +1,107 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Execute graphql query",
+    "description": {
+      "content": "Retrieve content respect to graphql query",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{GatewayAddress}}/content/v2",
+      "path": [
+        "content",
+        "v2"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [],
+      "query": []
+    },
+    "header": [
+      {
+        "id": "c52a5a13-1248-42f4-b1cc-3bbef2951fd2",
+        "key": "Content-Type",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "05de41e6-a72c-45d9-b098-f5fe0a2a8ded",
+        "key": "Accept",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "1c92d38e-dde5-47a2-98ee-dc9d77261bf1",
+        "key": "Authorization",
+        "value": "epi-single {{SingleKey}}",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "method": "POST",
+    "auth": {
+      "type": "noauth",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "auth"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "query"
+        }
+      ],
+      "basic": [
+        {
+          "key": "username",
+          "value": "{{AppKey}}",
+          "type": "string"
+        },
+        {
+          "key": "password",
+          "value": "{{AppSecret}}",
+          "type": "string"
+        }
+      ]
+    },
+    "body": {
+      "mode": "graphql",
+      "raw": "{\n  \"query\": \"<string>\",\n  \"mutation\": \"<string>\",\n  \"operationName\": \"<string>\",\n  \"variables\": {\n    \"key_0\": \"<string>\"\n  }\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      },
+      "graphql": {
+        "query": "query TextHeaderContent {\n  _Content(\n    where: {\n      _metadata: {\n        types: { eq: \"{{TypeName}}\" }\n      }\n    }\n    limit: 100\n    \n  ) {\n    total\n    item {\n      \n      _json\n    }\n  }\n}"
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "data",
+      "extensions"
+    ]
+  },
+  "backup": {
+    "graphqlQuery": "query TextHeaderContent {\n  _Content(\n    where: {\n      _metadata: {\n        types: { eq: \"{{TypeName}}\" }\n      }\n    }\n    limit: 100\n    \n  ) {\n    total\n    item {\n      \n      _json\n    }\n  }\n}"
+  }
+}
