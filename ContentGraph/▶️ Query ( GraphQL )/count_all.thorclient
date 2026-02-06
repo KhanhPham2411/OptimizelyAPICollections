@@ -1,0 +1,94 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "name": "Execute graphql query",
+    "description": {
+      "content": "Retrieve content respect to graphql query",
+      "type": "text/plain"
+    },
+    "url": {
+      "raw": "{{GatewayAddress}}/content/v2",
+      "path": [
+        "content",
+        "v2"
+      ],
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "variable": [],
+      "query": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "method": "POST",
+    "auth": {
+      "type": "basic",
+      "apikey": [
+        {
+          "key": "key",
+          "value": "auth"
+        },
+        {
+          "key": "value",
+          "value": "{{apiKey}}"
+        },
+        {
+          "key": "in",
+          "value": "query"
+        }
+      ],
+      "basic": [
+        {
+          "key": "username",
+          "value": "{{AppKey}}",
+          "type": "string"
+        },
+        {
+          "key": "password",
+          "value": "{{AppSecret}}",
+          "type": "string"
+        }
+      ]
+    },
+    "body": {
+      "mode": "graphql",
+      "raw": "{\n  \"query\": \"<string>\",\n  \"mutation\": \"<string>\",\n  \"operationName\": \"<string>\",\n  \"variables\": {\n    \"key_0\": \"<string>\"\n  }\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      },
+      "graphql": {
+        "query": "query MyQuery {\n  Data {\n    total(all: true)\n  }\n}"
+      }
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "data",
+      "extensions"
+    ]
+  },
+  "backup": {
+    "graphqlQuery": "query MyQuery {\n  Data {\n    total(all: true)\n  }\n}"
+  }
+}
