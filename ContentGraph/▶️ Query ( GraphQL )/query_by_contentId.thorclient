@@ -80,7 +80,7 @@
         }
       },
       "graphql": {
-        "query": "query TextHeaderContent {\n  _Content(\n    where: {\n      _metadata: {\n        key: { eq: \"{{ContentId}}\" }\n      }\n    }\n    limit: 100\n    \n  ) {\n    total\n    item {\n      \n      _json\n    }\n  }\n}"
+        "query": "query QueryByContentId {\n  _Content(\n    where: {\n      _metadata: {\n        key: { eq: \"{{ContentId}}\" }\n      }\n    }\n    limit: 100\n    \n  ) {\n    total\n    item {\n       _metadata {\n        key\n        displayName\n        types\n\n        ... on IInstanceMetadata {\n          container\n          path\n          status\n        }\n      }\n      _json\n    }\n  }\n}"
       }
     }
   },
@@ -102,6 +102,6 @@
     ]
   },
   "backup": {
-    "graphqlQuery": "query TextHeaderContent {\n  _Content(\n    where: {\n      _metadata: {\n        key: { eq: \"{{ContentId}}\" }\n      }\n    }\n    limit: 100\n    \n  ) {\n    total\n    item {\n      \n      _json\n    }\n  }\n}"
+    "graphqlQuery": "query QueryByContentId {\n  _Content(\n    where: {\n      _metadata: {\n        key: { eq: \"{{ContentId}}\" }\n      }\n    }\n    limit: 100\n    \n  ) {\n    total\n    item {\n       _metadata {\n        key\n        displayName\n        types\n\n        ... on IInstanceMetadata {\n          container\n          path\n          status\n        }\n      }\n      _json\n    }\n  }\n}"
   }
 }
